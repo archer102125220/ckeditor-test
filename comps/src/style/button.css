@@ -1,0 +1,15 @@
+.btn-check:checked+.btn,
+.btn.active,
+.btn.show,
+.btn-primary:first-child:active,
+:not(.btn-check)+.btn-primary:active {
+  box-shadow: inset 0px 0px 3px 3px #022fb0;
+}
+
+.btn-check:checked+.btn,
+.btn.active,
+.btn.show,
+.btn-danger:first-child:active,
+:not(.btn-check)+.btn-danger:active {
+  box-shadow: inset 0px 0px 3px 3px #b0022c;
+}

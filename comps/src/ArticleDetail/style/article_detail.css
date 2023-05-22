@@ -1,0 +1,6 @@
+p {
+  margin: 0;
+}
+.ck.ck-editor__editable_inline>:first-child {
+  margin-top: 10px !important;
+}

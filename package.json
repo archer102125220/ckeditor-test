@@ -1,0 +1,51 @@
+{
+  "name": "www",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "devwp": "webpack --mode development --watch",
+    "buildwp": "webpack --mode production",
+    "build-editor": "cross-env NODE_ENV=production FILE=article_editor yarn buildwp",
+    "build-list": "cross-env NODE_ENV=production FILE=article_list yarn buildwp",
+    "build-detail": "cross-env NODE_ENV=production FILE=article_detail yarn buildwp",
+    "dev": "webpack-dev-server --mode development --progress --color --open",
+    "dev-editor": "cross-env FILE=article_editor yarn dev",
+    "dev-list": "cross-env FILE=article_list yarn dev",
+    "dev-detail": "cross-env FILE=article_detail yarn dev",
+    "dev-server": "http-server -c-1 -o ./",
+    "start-editor": "npm run build-editor && npm run dev-server",
+    "start-list": "npm run build-list && npm run dev-server"
+  },
+  "dependencies": {
+    "@chakra-ui/icons": "^2.0.17",
+    "@chakra-ui/react": "^2.5.1",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "axios": "^1.3.4",
+    "dayjs": "^1.11.7",
+    "framer-motion": "^10.3.2",
+    "qs": "^6.11.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.8.0"
+  },
+  "devDependencies": {
+    "@types/qs": "^6.9.7",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.3",
+    "html-webpack-plugin": "^5.5.1",
+    "http-server": "^14.1.1",
+    "style-loader": "^3.3.2",
+    "svg-inline-loader": "^0.8.2",
+    "terser-webpack-plugin": "^5.3.7",
+    "ts-loader": "^9.4.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5",
+    "webpack": "^5.76.2",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.15.0"
+  }
+}
