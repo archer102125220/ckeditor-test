@@ -2,8 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import axios from 'axios';
 import dayjs from 'dayjs';
 
-import { importCKEditor } from './../../utils/createdCKEditor';
-import { UploadAdapter } from './../utils/UploadAdapter';
+import { importCKEditor, UploadAdapter } from './../../utils/createdCKEditor';
 
 import '../../style/button.css';
 
@@ -32,7 +31,7 @@ export default () => {
   const [endDateError, setEndDateError] = useState(false);
   const [dateErrorMsg, setDateErrorMsg] = useState('');
 
-  const CKEditorRef = useRef<any>(null);
+  const CKEditorRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     createdCKEditor();
